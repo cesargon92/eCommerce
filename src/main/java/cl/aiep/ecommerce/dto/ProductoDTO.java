@@ -1,10 +1,11 @@
-package cl.aiep.ecommerce.model;
+package cl.aiep.ecommerce.dto;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.util.List;
 
 
-public class Producto {
+public class ProductoDTO {
 
 	private String id;
 	private String nombre;
@@ -18,8 +19,9 @@ public class Producto {
 	private Date fechaIngreso;
 	private Time horaIngreso;
 	private Date fechaVencimiento;
+	private List<ComentarioDTO> listaComentarios;
 	
-	public Producto() {
+	public ProductoDTO() {
 		
 	}
 	
@@ -102,6 +104,14 @@ public class Producto {
 	}
 	public void setFechaVencimiento(Date fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
+	}
+
+	public List<ComentarioDTO> getListaComentarios() {
+		return listaComentarios;
+	}
+
+	public void setListaComentarios(List<ComentarioDTO> listaComentarios) {
+		this.listaComentarios = listaComentarios;
 	}
 	
 	
